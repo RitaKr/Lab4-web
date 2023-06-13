@@ -63,7 +63,8 @@ main header {
     justify-content: space-between;
     border: 1px solid var(--orange1-border);
     border-bottom: none;
-    width: 100px;
+    width: 90px;
+    
     
 }
 .logo p {
@@ -74,9 +75,10 @@ main header {
     justify-content: center;
     font-size: 1.4rem;
     text-align: center;
-    margin: 0;
+    margin: 0 10px;
     margin-top: 10px;
     line-height: 1.2em;
+    width: 80px;
     
 }
 .logo p span {
@@ -142,6 +144,9 @@ main header {
     right: 0;
 
 }
+.info section:not(.upper-section) .quit-btn {
+    visibility: hidden;
+}
 .hidden {
     visibility: hidden;
 }
@@ -174,7 +179,9 @@ nav ul {
     display: flex;
     list-style: none;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 0;
+    padding: 0;
 }
 nav li {
     padding: 10px 14px;
@@ -214,7 +221,7 @@ nav li.selected {
     top: -8px;
     right: -14px;
     color: white;
-    padding: 4px 8px;
+    padding: 4px 10px;
     border-radius: 5px;
     font-weight: bold;
     font-size: 0.9rem;
@@ -231,6 +238,7 @@ nav li.selected {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    font-size: 0.85rem;
 }
 .pizza figcaption h2 {
     color: var(--orange2);
@@ -238,7 +246,7 @@ nav li.selected {
 }
 .pizza figcaption p {
     margin: 0;
-    font-size: 0.85rem;
+    
 }
 .pizza figcaption .type {
     color: var(--gray);
@@ -247,7 +255,7 @@ nav li.selected {
 .pizza figcaption .size-selection {
     display: flex;
     justify-content: space-around;
-    font-size: 0.85rem;
+    
     margin-top: 6px;
 }
 .pizza figcaption .size-selection > section{
@@ -262,11 +270,13 @@ nav li.selected {
     margin-bottom: 6px;
     text-align: center;
     font-weight: bold;
+    flex-direction: column;
 }
 .pizza figcaption .price p {
-    font-size: 1.5rem;
+    font-size: 1.8em;
     
 }
+
 main footer {
     background: var(--footer-bg);
     display: flex;
@@ -447,7 +457,7 @@ aside footer .orange-btn {
     width: calc(100% + 21.6px);
 }
 .logo.badge p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: bold;
     margin: 5px 0;
 }
@@ -458,4 +468,65 @@ aside footer .orange-btn {
 }
 .logo.badge p.percent {
     margin: 10px 0;
+}
+@media screen and (max-width: 1230px){
+    section.main {
+        width: calc(100% - 50px);
+        align-self: center;
+    
+    }
+}
+
+@media screen and (max-width: 1065px){
+    .free-delivery {
+        display: none;
+    }
+    .pizza-selection {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 25px;
+        
+    }
+}
+@media screen and (max-width: 845px){
+    
+    .working-hours {
+        display: none;
+    }
+    .pizza-selection {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 25px 25px;
+        
+    }
+    .pizza > img {
+        width: 75%;
+        align-self: center;
+    }
+    .pizza figcaption {
+        font-size: 1rem;
+    }
+    .remark {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 670px){
+    
+    :root {
+        --aside-width: 280px;
+    }
+    .info p {
+        visibility: hidden;
+    }
+    .upper-section .quit-btn {
+        display: none;
+    }
+    .info section:not(.upper-section) .quit-btn {
+        visibility: visible;
+    }
+    .pizza > img {
+        width: 100%;
+        align-self: center;
+    }
+    
 }
