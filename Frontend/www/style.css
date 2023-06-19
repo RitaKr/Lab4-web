@@ -289,6 +289,9 @@ main footer {
 }
 main footer p {
     margin: 8px 0;
+    padding: 0 5px;
+    width: 100%;
+    text-align: center;
 }
 
 button {
@@ -500,7 +503,7 @@ aside footer .orange-btn {
         
     }
     .pizza > img {
-        width: 75%;
+        width: 290px;
         align-self: center;
     }
     .pizza figcaption {
@@ -513,7 +516,7 @@ aside footer .orange-btn {
 @media screen and (max-width: 670px){
     
     :root {
-        --aside-width: 280px;
+        --aside-width: 46vw;
     }
     .info p {
         visibility: hidden;
@@ -524,9 +527,75 @@ aside footer .orange-btn {
     .info section:not(.upper-section) .quit-btn {
         visibility: visible;
     }
+    .pizza {
+        max-width: 290px;
+    }
     .pizza > img {
         width: 100%;
         align-self: center;
     }
+    .pizza figcaption .size-selection {
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 6px;
+    }
+    .pizza figcaption .size-selection > section.small-pizza {
+        margin-bottom: 10px;
+    }
     
+    
+}
+@media screen and (max-width: 550px){
+    body {
+        flex-direction: column;
+    }
+    main {
+        width: 100%;
+    }
+    .working-hours {
+        display: inline-block;
+    }
+    aside {
+        position: relative;
+        width: 100%;
+    }
+    aside footer {
+        position: relative
+    }
+    .pizza {
+        max-width: max-content;
+    }
+    .pizza figcaption .size-selection {
+        flex-direction: row;
+        
+    }
+    .pizza figcaption .size-selection > section.small-pizza {
+        margin-bottom: 0px;
+    }
+    .bucket-item {
+        
+        background-size: 25%;
+
+        background-position: 120% center;
+    }
+}
+@media screen and (max-width: 470px){
+    .working-hours {
+        display: none;
+    }
+}
+@media screen and (max-width: 350px){
+    .pizza figcaption .size-selection {
+        flex-direction: column;
+        
+    }
+    .pizza figcaption .size-selection > section.small-pizza {
+        margin-bottom: 10px;
+    }
+    .bucket-item {
+        
+        background-size: 30%;
+
+        background-position: 125% center;
+    }
 }
